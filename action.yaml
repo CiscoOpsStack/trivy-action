@@ -135,7 +135,7 @@ runs:
 
     - name: Restore DB from cache
       if: ${{ inputs.cache == 'true' }}
-      uses: actions/cache@v4
+      uses: CiscoOpsStack/cache@v4
       with:
         path: ${{ inputs.cache-dir }}
         key: cache-trivy-${{ steps.date.outputs.date }}
